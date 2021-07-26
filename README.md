@@ -5,5 +5,6 @@ Speech recognition project using [SpeechRecognition](https://github.com/Uberi/sp
 - [SpeechRecognition github](https://github.com/Uberi/speech_recognition)
 - [Hidden Markov Model](https://en.wikipedia.org/wiki/Hidden_Markov_model)
 - [Cepstrum](https://en.wikipedia.org/wiki/Cepstrum) 
+- [gTTS](https://gtts.readthedocs.io/en/latest/)
 
 
