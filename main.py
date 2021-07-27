@@ -18,9 +18,9 @@ while True:
             text = r.recognize_google(audio)
             voice = voice + str(text)
         except:
-            print("say something....")
+            print("Say something ....")
 hr = gTTS(text=voice, lang='en', slow=False)
-hr.save("1.mp3")
+hr.save("record.mp3")
 
 
 
