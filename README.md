@@ -13,6 +13,7 @@ run the main.py file: `python main.py`. Once started, each word you say will be 
 
 ## Resources
 - [SpeechRecognition github](https://github.com/Uberi/speech_recognition)
+- [Guide to speech rocognition](https://realpython.com/python-speech-recognition/)
 - [Hidden Markov Model](https://en.wikipedia.org/wiki/Hidden_Markov_model)
 - [Cepstrum](https://en.wikipedia.org/wiki/Cepstrum) 
 - [gTTS](https://gtts.readthedocs.io/en/latest/)
