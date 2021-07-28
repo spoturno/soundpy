@@ -11,6 +11,8 @@ Speech recognition project using [SpeechRecognition](https://github.com/Uberi/sp
 ## Usage
 run the main.py file: `python main.py`. Once started, each word you say will be displayed on the command line while also saving them as a string and later saving the text as .mp3 format 
 
+run the game.py game file: `python game.py`. Once started you will be requested to chooose (speech to the microphone) one among the options, if you fail 3 times you lost the game.
+
 ## Resources
 - [SpeechRecognition github](https://github.com/Uberi/speech_recognition)
 - [Guide to speech rocognition](https://realpython.com/python-speech-recognition/)
