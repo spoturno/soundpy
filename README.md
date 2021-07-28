@@ -1,5 +1,5 @@
 # Speech Recognition
-Speech recognition project using [SpeechRecognition](https://github.com/Uberi/speech_recognition) library. The goal of this project is to build a fully functional speech recognition given by the user with microphone. The most important thing is to understand how speech recognition worksk in depth. The following commands are linux based.
+Speech recognition project using [SpeechRecognition](https://github.com/Uberi/speech_recognition) library. The goal of this project is to build a fully functional speech recognition given by the user with microphone, also apply this to build a small game about name gussing. The most important thing is to understand how speech recognition worksk in depth. The following commands are linux based.
 
 ## Prerequisites
 - python, pip, 
