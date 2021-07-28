@@ -33,8 +33,9 @@ def recognize_speech_mic(recognizer, microphone):
     return response
 
 if __name__ == "__main__":
-    NAMES = ["thomas", "pablo", "benjamin", "jane", "robert"]
+    NAMES = ["thomas", "pablo", "franklin", "james", "robert"]
     NUM_GUESSES = 3
+    QLIMIT = len(NAMES) 
 
     # create recognizer and mic instances
     recognizer = sr.Recognizer()
@@ -55,21 +56,50 @@ if __name__ == "__main__":
     print(instructions)
     time.sleep(3)
 
-    for i in range(NUM_GUESSES):
-        for j in range(len(NAMES)):
-            print('Guess {}. Speak!'.format(i+1))
-            guess = recognize_speech_mic(recognizer, microphone)
+#    for i in range(NUM_GUESSES):
+#        guess = recognize_speech_mic(recognizer, microphone)
+#        print('Guess {}. Speak!'.format(i+1))
+#        for j in range(len(NAMES)):
+#            if guess["transcription"]:
+#                break
+#            if not guess["success"]:
+#                break
+#            print("I didn't catch that. What did you say?\n")
+#
+#        if guess["error"]:
+#            print("ERROR: {}".format(guess["error"]))
+
+
+    for i in range(NUM_GUESSES-1):
+        print('Guess {}. Speak!'.format(i+1))
+        guess = recognize_speech_mic(recognizer, microphone)
+        for j in range(QLIMIT):
             if guess["transcription"]:
                 break
             if not guess["success"]:
                 break
-            print("I didn't catch that. What did you say?\n")
+            print("I didn't catch that. Repeat please ... ")
+            guess = recognize_speech_mic(recognizer, microphone)
+            
+        #if error then break the game
+        if guess["error"]:
+            print("EROR: {}".format(guess["error"]))
+            break
 
-            if guess["error"]:
-                print("ERROR: {}".format(guess["error"]))
+        # show user guess
+        print("You said: {}".format(guess["transcription"]))
+
+        # calculate
+        guess_is_correct = guess["transcription"].lower() == name.lower()
 
 
-
-
+        if guess_is_correct:
+            print("Correct! You win!".format(name))
+            break
+        elif i < NUM_GUESSES:
+            print("Incorrect. Try again.\n")
+        else:
+            print("Sorry, you lose!\nThe answer was: '{}'".format(name))
+        
 
 
